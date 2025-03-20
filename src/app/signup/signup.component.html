@@ -1,14 +1,59 @@
-<p>signup works!</p>
+<div class="signup-container">
+  <div class="signup-box">
+    <h2>Signup</h2>
+    
+    <form (ngSubmit)="onSubmit()" #signupForm="ngForm">
+      <div class="input-group">
+        <label>First Name</label>
+        <input type="text" [(ngModel)]="signupData.firstName" name="firstName" required />
+      </div>
 
-<div class="login-container">
-    <h2>Login</h2>
-    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-      <label for="emailid">Email Id</label>
-      <input type="text" id="email" formControlName="email" placeholder="Enter your email id" required>
-      <label for="password">Password</label>
-      <input type="password" id="password" formControlName="password" placeholder="Enter your password" required>
-      <button type="submit">Login</button>
+      <div class="input-group">
+        <label>Last Name</label>
+        <input type="text" [(ngModel)]="signupData.lastName" name="lastName" required />
+      </div>
+
+      <div class="input-group">
+        <label>Email ID</label>
+        <input type="email" [(ngModel)]="signupData.email" name="email" required />
+      </div>
+
+      <div class="input-group">
+        <label>Mobile No</label>
+        <input type="text" [(ngModel)]="signupData.mobile" name="mobile" pattern="[0-9]{10}" required />
+      </div>
+
+      <div class="input-group password-group">
+        <label>Password</label>
+        <input 
+          [type]="showPassword ? 'text' : 'password'"
+          [(ngModel)]="signupData.password" 
+          name="password" 
+          required 
+        />
+        <button type="button" (click)="togglePasswordVisibility()">
+          {{ showPassword ? 'Hide' : 'Show' }}
+        </button>
+      </div>
+
+      <div class="input-group password-group">
+        <label>Confirm Password</label>
+        <input 
+          [type]="showConfirmPassword ? 'text' : 'password'"
+          [(ngModel)]="signupData.confirmPassword" 
+          name="confirmPassword" 
+          required 
+        />
+        <button type="button" (click)="toggleConfirmPasswordVisibility()">
+          {{ showConfirmPassword ? 'Hide' : 'Show' }}
+        </button>
+      </div>
+
+      <button type="submit" class="signup-btn" [disabled]="!signupForm.form.valid">Signup</button>
     </form>
-    <p *ngIf="errorMessage" class="error">{{ errorMessage }}</p>
-    <p>Don't have an account? <a routerLink="/signup">Sign up</a></p>
+
+    <div class="login-link">
+      <p>Already have an account? <a [routerLink]="['/login']">Login</a></p>
+    </div>
   </div>
+</div>

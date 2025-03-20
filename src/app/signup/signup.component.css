@@ -1,127 +1,75 @@
-/* Reset some default browser styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif; /* or any font you prefer */
-  }
-  
-  /* Body Background */
-  body {
-    background-color: #f5f5f5;
-  }
-  
-  /* Top Navigation */
-  .top-nav {
-    padding: 20px;
-    text-align: left;
-    background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  }
-  
-  .go-home {
-    background-color: #ffad4d;
-    color: #fff;
-    border: none;
-    padding: 10px 18px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 14px;
-  }
-  
-  .go-home:hover {
-    background-color: #ff9c2e;
-  }
-  
-  /* Main Container */
-  .container {
-    max-width: 700px;
-    margin: 40px auto;
-    background-color: #fff;
-    border-radius: 20px;
-    padding: 30px 40px;
-    box-shadow: 0 4px 15px rgba(199, 179, 179, 0.2);
-  }
-  
-  /* Heading */
-  .container h2 {
-    text-align: center;
-    margin-bottom: 30px;
-    color: #333;
-    font-size: 28px;
-  }
-  
-  /* Registration Form */
-  .registration-form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-  
-  /* Form Group */
-  .form-group {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  /* Labels */
-  .form-group label {
-    font-weight: 600;
-    margin-bottom: 5px;
-    color: #555;
-  }
-  
-  /* Required Field Asterisk */
-  .required {
-    color: red;
-  }
-  
-  /* Inputs */
-  .form-group input {
-    padding: 12px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    outline: none;
-    font-size: 14px;
-    transition: border-color 0.3s;
-  }
-  
-  .form-group input:focus {
-    border-color: #6c63ff;
-  }
-  
-  /* Registration Button */
-  .register-btn {
-    padding: 12px;
-    border: none;
-    border-radius: 8px;
-    background: #6c63ff;
-    color: #fff;
-    cursor: pointer;
-    font-size: 16px;
-    width: 100%;
-    margin-top: 10px;
-    transition: background 0.3s ease;
-    font-weight: 500;
-  }
-  
-  .register-btn:hover {
-    background: #5c53dd;
-  }
-  
-  /* Login Link */
-  .login-link {
-    margin-top: 10px;
-    text-align: center;
-    font-size: 14px;
-  }
-  
-  .login-link a {
-    color: #6c63ff;
-    text-decoration: none;
-  }
-  
-  .login-link a:hover {
-    text-decoration: underline;
-  }
-  
+.signup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  background-color: #f4f4f4;
+  background: url('/assets/img/signup.png')
+}
+
+.signup-box {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  width: 600px;
+  text-align: center;
+}
+
+.input-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.input-group label {
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.password-group {
+  position: relative;
+}
+
+.password-group button {
+  position: absolute;
+  right: 10px;
+  top: 40px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 12px;
+  color: blue;
+}
+
+.signup-btn {
+  width: 100%;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.signup-btn:enabled {
+  background-color: #ccc;
+}
+
+.login-link {
+  margin-top: 10px;
+}
+
+.login-link a {
+  color: #007bff;
+  text-decoration: none;
+}

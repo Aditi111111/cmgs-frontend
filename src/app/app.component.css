@@ -6,9 +6,9 @@ font-optical-sizing: auto;
 font-style: normal;
 }
 .navbar {
-    height: 80px;
+    height: 35px;
     font-family:'Times New Roman', Times, serif; 
-    padding: 50px 0; 
+    padding: 35px 0; 
   }
   
   .navbar-brand {
