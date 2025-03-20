@@ -1,0 +1,14 @@
+<p>signup works!</p>
+
+<div class="login-container">
+    <h2>Login</h2>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <label for="emailid">Email Id</label>
+      <input type="text" id="email" formControlName="email" placeholder="Enter your email id" required>
+      <label for="password">Password</label>
+      <input type="password" id="password" formControlName="password" placeholder="Enter your password" required>
+      <button type="submit">Login</button>
+    </form>
+    <p *ngIf="errorMessage" class="error">{{ errorMessage }}</p>
+    <p>Don't have an account? <a routerLink="/signup">Sign up</a></p>
+  </div>

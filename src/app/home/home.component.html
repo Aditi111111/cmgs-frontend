@@ -1,0 +1,12 @@
+<div class="home-container">
+    <div class="carousel">
+      <div 
+        class="carousel-item" 
+        *ngFor="let slide of slides; let i = index"
+        [ngClass]="{ 'active': i === currentIndex }"
+      >
+        <img [src]="slide" alt="Slide {{ i + 1 }}" class="slide-img">
+      </div>
+    </div>
+  </div>
+  

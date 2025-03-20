@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "cmgs-f": {
+    "angular-14-crud-example": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/cmgs-f",
+            "outputPath": "dist/angular-14-crud-example",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -64,10 +64,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "cmgs-f:build:production"
+              "browserTarget": "angular-14-crud-example:build:production"
             },
             "development": {
-              "browserTarget": "cmgs-f:build:development"
+              "browserTarget": "angular-14-crud-example:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -75,7 +75,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "cmgs-f:build"
+            "browserTarget": "angular-14-crud-example:build"
           }
         },
         "test": {
