@@ -1,0 +1,50 @@
+<div class="complaint-container">
+    <h2>Apply New Complaint Request</h2>
+    
+    <form (ngSubmit)="submitComplaint()" enctype="multipart/form-data">
+  
+      <div class="form-row">
+        <div class="form-group">
+          <label for="complaintType">Complaint Type</label>
+          <select id="complaintType" [(ngModel)]="complaint.complaintType" name="complaintType" required>
+            <option value="" disabled>--Select--</option>
+            <option *ngFor="let type of complaintTypes" [value]="type">{{ type }}</option>
+          </select>
+        </div>
+  
+        <div class="form-group">
+          <label for="complaintSubType">Sub Type</label>
+          <select id="complaintSubType" [(ngModel)]="complaint.complaintSubType" name="complaintSubType" required>
+            <option value="" disabled>--Select--</option>
+            <option *ngFor="let subType of complaintSubTypes" [value]="subType">{{ subType }}</option>
+          </select>
+        </div>
+      </div>
+  
+      <!-- Zone -->
+      <div class="form-group">
+        <label for="zone">Zone</label>
+        <select id="zone" [(ngModel)]="complaint.zone" name="zone" required>
+          <option value="" disabled>--Select--</option>
+          <option *ngFor="let z of zones" [value]="z">{{ z }}</option>
+        </select>
+      </div>
+  
+      <!-- Complaint Details -->
+      <div class="form-group">
+        <label for="complaintDetails">Complaint Details</label>
+        <textarea id="complaintDetails" [(ngModel)]="complaint.details" name="complaintDetails" rows="4" required></textarea>
+      </div>
+  
+      <!-- Image Upload -->
+      <div class="form-group">
+        <label for="proofImage">Attach Proof</label>
+        <input type="file" id="proofImage" (change)="onFileSelected($event)" accept="image/*">
+      </div>
+  
+      <!-- Submit Button -->
+      <button type="submit" class="submit-btn">Submit</button>
+  
+    </form>
+  </div>
+  

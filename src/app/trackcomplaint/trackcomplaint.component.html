@@ -1,0 +1,33 @@
+<div class="track-complaint-container">
+    <h2>Track Complaint Status</h2>
+
+    <form (submit)="onSearch()">
+        <div class="form-row">
+         
+            <div class="form-group">
+                <label for="complaintType">Complaint Type</label>
+                <select id="complaintType" [(ngModel)]="complaintType" name="complaintType">
+                    <option *ngFor="let type of complaintTypes" [value]="type">{{ type }}</option>
+                </select>
+            </div>
+
+           
+            <div class="form-group">
+                <label for="complaintId">Complaint ID</label>
+                <input type="text" id="complaintId" [(ngModel)]="complaintId" name="complaintId" placeholder="">
+            </div>
+
+    
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" [(ngModel)]="username" name="username" placeholder="">
+            </div>
+        </div>
+
+     
+        <div class="button-container">
+            <button type="submit" class="btn search-btn">Search</button>
+            <button type="button" class="btn reset-btn" (click)="onReset()">Reset</button>
+        </div>
+    </form>
+</div>

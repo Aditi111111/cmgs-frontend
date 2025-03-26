@@ -13,6 +13,8 @@ import { ForgotPasswordComponent } from './forgotpassword/forgotpassword.compone
 import { UsernavbarComponent } from './usernavbar/usernavbar.component';
 import { UserdashComponent } from './userdash/userdash.component';
 import { MatCardModule, MatIconModule } from '@angular/material';
+import { NewcomplaintComponent } from './newcomplaint/newcomplaint.component';
+import { TrackcomplaintComponent } from './trackcomplaint/trackcomplaint.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +26,8 @@ import { MatCardModule, MatIconModule } from '@angular/material';
     ForgotPasswordComponent,
     UsernavbarComponent,
     UserdashComponent,
+    NewcomplaintComponent,
+    TrackcomplaintComponent,
   ],
   imports: [
     BrowserModule,
@@ -33,7 +37,6 @@ import { MatCardModule, MatIconModule } from '@angular/material';
     HttpClientModule,
     MatCardModule,
     MatIconModule,
-    // LayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]

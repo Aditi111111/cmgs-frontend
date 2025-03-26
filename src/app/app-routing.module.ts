@@ -7,6 +7,8 @@ import { ContactComponent } from './contact/contact.component';
 import { ForgotPasswordComponent } from './forgotpassword/forgotpassword.component';
 import { UsernavbarComponent } from './usernavbar/usernavbar.component';
 import { UserdashComponent } from './userdash/userdash.component';
+import { NewcomplaintComponent } from './newcomplaint/newcomplaint.component';
+import { TrackcomplaintComponent } from './trackcomplaint/trackcomplaint.component';
 
 
 const routes: Routes = [
@@ -19,6 +21,8 @@ const routes: Routes = [
   { path: 'forgotpassword', component: ForgotPasswordComponent},
   { path: 'usernavbar', component: UsernavbarComponent},
   { path: 'userdash', component: UserdashComponent},
+  { path: 'newcomplaint', component: NewcomplaintComponent},
+  { path: 'trackcomplaint', component: TrackcomplaintComponent},
 ];
 
 @NgModule({
