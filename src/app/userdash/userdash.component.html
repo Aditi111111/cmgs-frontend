@@ -1,0 +1,126 @@
+<div class="main-container">
+    <!-- <app-usernavbar [sidenavTemplateRef]="navContent"></app-usernavbar> -->
+    <div class="content-wrapper">
+        <section>
+            <span><h1 class="koko">Developer View</h1> </span>
+            <div class="box">
+                <div class="">
+                    <div class="hi c-flex-wrap ">
+                        <!-- Card 1: Active Users -->
+                        <div class="col-md-4 no p-10">
+                            <mat-card class="example-card equal-height">
+                                <mat-card-title class="header-table-user-dashboard">
+                                    <span><mat-icon class="active-img">person_outline</mat-icon></span>
+                                    Active Users
+                                </mat-card-title>
+                                <mat-card-content>
+                                    <div class="stat-box">
+                                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                            <tbody>
+                                                <tr class="even">
+                                                    <td align="left" class="stat-left-txt">
+                                                        <a>Logged In Total Users Count</a>
+                                                    </td>
+                                                    <td align="right" class="stat-right-txt">
+                                                        <a>{{ systemDetail?.Total_User_Count }}</a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </mat-card-content>
+                            </mat-card>
+                        </div>
+                        <!-- Card 2: RAM Details -->
+                        <div class="col-md-4 no p-10">
+                            <mat-card class="example-card equal-height">
+                                <mat-card-title class="header-table-user-dashboard"> RAM Details </mat-card-title>
+                                <mat-card-content>
+                                    <div class="stat-box">
+                                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                            <tbody>
+                                                <tr class="even">
+                                                    <td align="left" class="stat-left-txt">
+                                                        <a>Free Memory MB</a>
+                                                    </td>
+                                                    <td align="right" class="stat-right-txt">
+                                                        <a>{{ systemDetail?.RAM_Details?.freeMemoryMB }}</a>
+                                                    </td>
+                                                </tr>
+                                                <tr class="even">
+                                                    <td align="left" class="stat-left-txt">
+                                                        <a>Total Memory MB</a>
+                                                    </td>
+                                                    <td align="right" class="stat-right-txt">
+                                                        <a>{{ systemDetail?.RAM_Details?.totalMemoryMB }}</a>
+                                                    </td>
+                                                </tr>
+                                                <tr class="even">
+                                                    <td align="left" class="stat-left-txt">
+                                                        <a>Used Memory MB</a>
+                                                    </td>
+                                                    <td align="right" class="stat-right-txt">
+                                                        <a>{{ systemDetail?.RAM_Details?.usedMemoryMB }}</a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </mat-card-content>
+                            </mat-card>
+                        </div>
+                        <!-- Card 3: Active Users (Duplicate) -->
+                        <div class="col-md-4 no p-10">
+                            <mat-card class="example-card equal-height">
+                                <mat-card-title class="header-table-user-dashboard">
+                                    Active Users
+                                </mat-card-title>
+                                <mat-card-content>
+                                    <div class="stat-box">
+                                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                            <tbody>
+                                                <tr class="even">
+                                                    <td align="left" class="stat-left-txt">
+                                                        <a>Logged In Total Users Count</a>
+                                                    </td>
+                                                    <td align="right" class="stat-right-txt">
+                                                        <a>{{ systemDetail?.Total_User_Count }}</a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </mat-card-content>
+                            </mat-card>
+                        </div>
+                    </div>
+                    <div class="row key-charge-padding-background">
+                        <table class="table table-striped custom-table custom-table-big tr th ">
+                            <thead>
+                                <tr style="background-color: #003B78; color: #FFFFFF;">
+                                    <th scope="col" style="width:20%" class="pl-5">User ID</th>
+                                    <th scope="col" style="width:20%" class="pl-5">User Name</th>
+                                    <th scope="col" style="width:20%" class="pl-5">User Email</th>
+                                    <th scope="col" style="width:20%" class="pl-5">Logged In Time</th>
+                                    <th scope="col" style="width:20%" class="pl-5">Logged Out Time</th>
+                                </tr>
+                            </thead>
+                            <tbody class="font-sm">
+                                <tr *ngFor="let item of systemDetail?.User_Details;" style="background-color: #FFFFFF;">
+                                    <td>{{item.userId}}</td>
+                                    <td>{{item.username}} </td>
+                                    <td>{{item.userEmail}} </td>
+                                    <td>{{item.loggedInTime}} </td>
+                                    <td>{{item.loggedOutTime}} </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+<ng-template #navContent>
+    <app-usernavbar></app-usernavbar>
+</ng-template>

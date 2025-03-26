@@ -1,0 +1,29 @@
+<div class="user-navbar">
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse item" id="navbarNav">
+                <ul class="navbar-nav flex-column">
+                    <li class="nav-item">
+                        <a routerLink="/userdash" class="nav-link">Dashboard</a>
+                    </li>
+                    <li class="nav-heading">Manage Complaints</li>
+                    <div class="nav-center">
+                        <li class="nav-item">
+                            <a routerLink="newcomplaint" class="nav-link">New Complaint</a>
+                        </li>
+                        <li class="nav-item">
+                            <a routerLink="trackcomplaint" class="nav-link">Track Complaint</a>
+                        </li>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="content">
+        <router-outlet></router-outlet>
+    </div>
+</div>

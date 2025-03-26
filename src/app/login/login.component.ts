@@ -8,30 +8,47 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
- loginForm: FormGroup;
-  private headderrrrrrrr = { headers : new HttpHeaders({})};
+  loginForm: FormGroup;
   errorMessage: string = '';
-url: any = 'http://localhost:8081/admin/login';
-  constructor(private fb: FormBuilder,private httpclient: HttpClient) {
+  url: string = 'http://localhost:8081/admin/login';
+
+  private httpHeaders = { 
+    headers: new HttpHeaders({ 'Content-Type': 'application/json' }) 
+  };
+
+  passwordVisible: boolean = false;
+
+  constructor(private fb: FormBuilder, private httpclient: HttpClient) {
     this.loginForm = this.fb.group({
-      email: ['', [Validators.required, Validators.minLength(3)]],
-      password: ['', [Validators.required]]
+      email: ['', [Validators.required, Validators.email]], 
+      password: ['', [Validators.required, Validators.minLength(6)]]
     });
   }
-  ngOnInit(): void {
-    throw new Error('Method not implemented.');
+
+  ngOnInit(): void {}
+
+  public loginUser(credentials: any) {
+    return this.httpclient.post<any>(this.url, credentials, this.httpHeaders);
   }
-  public getList() {
-    return this.httpclient.get<any>(this.url);
-  }
+
   onSubmit() {
-    // if (this.loginForm.valid) {
-      this.getList().subscribe(data =>{
-        // alert(data);
-        console.log(data," it is successful")
-      })
-    // } else {
-    //   this.errorMessage = 'Please fill out the form correctly.';
-    // }
+    if (this.loginForm.valid) {
+      this.loginUser(this.loginForm.value).subscribe({
+        next: (data) => {
+          console.log("Login successful:", data);
+          alert("Login successful!");
+        },
+        error: (error) => {
+          console.error("Login failed:", error);
+          this.errorMessage = "Invalid email or password. Please try again.";
+        }
+      });
+    } else {
+      this.errorMessage = 'Please fill out the form correctly.';
+    }
+  }
+
+  togglePasswordVisibility() {
+    this.passwordVisible = !this.passwordVisible;
   }
 }

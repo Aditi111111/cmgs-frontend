@@ -9,6 +9,10 @@ import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
+import { ForgotPasswordComponent } from './forgotpassword/forgotpassword.component';
+import { UsernavbarComponent } from './usernavbar/usernavbar.component';
+import { UserdashComponent } from './userdash/userdash.component';
+import { MatCardModule, MatIconModule } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -17,13 +21,19 @@ import { ContactComponent } from './contact/contact.component';
     SignupComponent,
     HomeComponent,
     ContactComponent,
+    ForgotPasswordComponent,
+    UsernavbarComponent,
+    UserdashComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatCardModule,
+    MatIconModule,
+    // LayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]

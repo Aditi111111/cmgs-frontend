@@ -1,7 +1,5 @@
 <div class="login-container">
-    <div class="login-image">
-        <img src="../../assets/img/admin.jpg" alt="Login Image">
-    </div>
+
     <div class="login-input">
         <div class="login-title">
             <h1>Login</h1>
@@ -11,13 +9,20 @@
                 <label for="email">Email</label>
                 <input type="text" id="email" placeholder="">
             </div>
+        
             <div class="inputs">
                 <label for="password">Password</label>
-                <input type="password" id="password" placeholder="">
+                <div class="password-container">
+                    <input [type]="passwordVisible ? 'text' : 'password'" id="password" placeholder="">
+                    <span class="toggle-password" (click)="togglePasswordVisibility()">
+                        <i [ngClass]="passwordVisible ? 'bi bi-eye-slash' : 'bi bi-eye'"></i>
+                    </span>
+                </div>
             </div>
+            
             <div class="btns">
                 <button>Login Now</button>
-                <a class="forgot" href="#">Forgot Password?</a>
+                <a class="forgot" [routerLink]="['/forgotpassword']">Forgot Password?</a>
             </div>
             <div class="signup-link">
                 <p>Don't have an account? 

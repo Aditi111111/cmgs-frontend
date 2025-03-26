@@ -7,9 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
   slides = [
-    { image: 'assets/img/slide1.png', title: '!!Welcome to CMGS!!', description: 'One stop solution to all grievances' },
-    { image: 'assets/img/slide2.png', title: 'Complaints', description: 'Helping you register complaints seamlessly' },
-    { image: 'assets/img/slide3.jpg', title: 'Help & Support', description: 'We are always here to assist you!' }
+    { image: 'assets/img/slide1.jpg', title: 'Welcome To CMGS', description: 'One stop solution to all your grievances' },
+    { image: 'assets/img/slide2.jpg', title: 'Complaints?', description: 'Helping you register complaints seamlessly' },
+    { image: 'assets/img/slide3.jpg', title: 'Got Suggestions?', description: 'We are always here to assist you!' }
   ];
 
   currentIndex = 0;
