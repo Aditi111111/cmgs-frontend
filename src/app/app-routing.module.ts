@@ -9,6 +9,15 @@ import { UsernavbarComponent } from './usernavbar/usernavbar.component';
 import { UserdashComponent } from './userdash/userdash.component';
 import { NewcomplaintComponent } from './newcomplaint/newcomplaint.component';
 import { TrackcomplaintComponent } from './trackcomplaint/trackcomplaint.component';
+import { AdmindashComponent } from './admindash/admindash.component';
+import { AdminnavbarComponent } from './adminnavbar/adminnavbar.component';
+import { ComplaintslistComponent } from './complaintslist/complaintslist.component';
+import { ReviewcomplaintsComponent } from './reviewcomplaints/reviewcomplaints.component';
+import { UpdatecomplaintsComponent } from './updatecomplaints/updatecomplaints.component';
+import { UserslistComponent } from './userslist/userslist.component';
+import { AddDepartmentComponent } from './add-department/add-department.component';
+import { DepartmentListComponent } from './departmentlist/departmentlist.component';
+
 
 
 const routes: Routes = [
@@ -23,6 +32,14 @@ const routes: Routes = [
   { path: 'userdash', component: UserdashComponent},
   { path: 'newcomplaint', component: NewcomplaintComponent},
   { path: 'trackcomplaint', component: TrackcomplaintComponent},
+  { path: 'adminnavbar', component: AdminnavbarComponent},
+  { path: 'admindash', component: AdmindashComponent},
+  { path: 'complaintslist', component: ComplaintslistComponent},
+  { path: 'reviewcomplaints', component: ReviewcomplaintsComponent},
+  { path: 'updatecomplaints', component: UpdatecomplaintsComponent},
+  { path: 'userslist', component: UserslistComponent},
+  { path: 'departmentlist', component: DepartmentListComponent},
+  { path: 'add-department', component: AddDepartmentComponent},
 ];
 
 @NgModule({

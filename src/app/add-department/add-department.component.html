@@ -1,0 +1,50 @@
+<div class="department-container">
+    <!-- Left: Add Department Form -->
+    <div class="form-container">
+        <h2>Add Department</h2>
+        <form (ngSubmit)="addDepartment()">
+            <div class="form-group">
+                <label>Department Name:</label>
+                <input type="text" [(ngModel)]="newDepartment.name" name="deptName" required />
+            </div>
+            <div class="form-group">
+                <label>Admin Name:</label>
+                <input type="text" [(ngModel)]="newDepartment.adminName" name="adminName" required />
+            </div>
+            <div class="form-group">
+                <label>Contact No:</label>
+                <input type="text" [(ngModel)]="newDepartment.contactNo" name="contactNo" required />
+            </div>
+            <button type="submit" class="btn btn-add">Add Department</button>
+        </form>
+    </div>
+
+    <!-- Right: Department List -->
+    <div class="table-container">
+        <h2>Existing Departments</h2>
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Department ID</th>
+                        <th>Department Name</th>
+                        <th>Admin Name</th>
+                        <th>Contact No</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let dept of departments">
+                        <td>{{ dept.id }}</td>
+                        <td>{{ dept.name }}</td>
+                        <td>{{ dept.adminName }}</td>
+                        <td>{{ dept.contactNo }}</td>
+                        <td>
+                            <button class="btn btn-delete" (click)="deleteDepartment(dept.id)">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,36 @@
+<div class="row p-0 m-0">
+    <div class="col-md-3">
+      <app-adminnavbar></app-adminnavbar>
+    </div>
+<div class="admin-dashboard">
+
+    <div class="main-content">
+        <div class="top-header">
+            <h2>Admin Dashboard</h2>
+            <!-- <div class="admin-actions">
+                <button class="btn logout-btn" (click)="logout()">
+                    <i class="bi bi-box-arrow-right"></i> Logout
+                </button>
+            </div>
+        </div> -->
+        <div class="dashboard-widgets">
+            <div class="widget">
+                <i class="bi bi-people"></i>
+                <h3>Total Users</h3>
+                <p>{{ totalUsers }}</p>
+            </div>
+            <div class="widget">
+                <i class="bi bi-list-check"></i>
+                <h3>Complaints</h3>
+                <p>{{ totalComplaints }}</p>
+            </div>
+            <div class="widget">
+                <i class="bi bi-building"></i>
+                <h3>Departments</h3>
+                <p>{{ totalDepartments }}</p>
+            </div>
+        </div>
+
+        <router-outlet></router-outlet>
+    </div>
+</div>

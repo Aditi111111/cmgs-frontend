@@ -12,7 +12,7 @@ export class UserdashComponent implements OnInit {
   closedComplaints = 0;
 
   complaints = [
-    {id: 'C123', date: '01-01-2025', status: 'Open', lastUpdate: '07-01-2025', days: 9 },
+    {id: 'C123', date: '01-01-2025', status: 'Open', lastUpdate: '2024-03-10', days: 9 },
     // { merged: 'Yes', id: 'C124', date: '2024-03-02', status: 'Pending', lastUpdate: '2024-03-12', days: 10 },
   ];
   constructor() { }

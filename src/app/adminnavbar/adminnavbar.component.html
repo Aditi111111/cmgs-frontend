@@ -1,0 +1,63 @@
+<div class="admin-navbar">
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#adminNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="adminNavbar">
+                <ul class="navbar-nav flex-column">
+                    <li class="nav-item">
+                        <a routerLink="/admindash" class="nav-link">
+                            <i class="bi bi-house-door"></i> Dashboard
+                        </a>
+                    </li>
+
+                    <li class="nav-heading">Manage Complaints</li>
+                    <hr class="nav-divider" />
+                    <div class="nav-center">
+                        <li class="nav-item">
+                            <a routerLink="/complaintslist" class="nav-link">
+                                <i class="bi bi-clipboard-check"></i> Complaints List
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a routerLink="/reviewcomplaints" class="nav-link">
+                                <i class="bi bi-search"></i> Review Complaints
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a routerLink="/updatecomplaints" class="nav-link">
+                                <i class="bi bi-pencil-square"></i> Update Complaints
+                            </a>
+                        </li>
+                    </div>
+
+                    <li class="nav-heading">Manage Users</li>
+                    <hr class="nav-divider" />
+                    <div class="nav-center">
+                        <li class="nav-item">
+                            <a routerLink="/userslist" class="nav-link">
+                                <i class="bi bi-people"></i> Users List
+                            </a>
+                        </li>
+                    </div>
+
+                    <li class="nav-heading">Manage Department</li>
+                    <hr class="nav-divider" />
+                    <div class="nav-center">
+                        <li class="nav-item">
+                            <a routerLink="/departmentlist" class="nav-link">
+                                <i class="bi bi-list-ul"></i> Department List
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a routerLink="/add-department" class="nav-link">
+                                <i class="bi bi-plus-circle"></i> Add Department
+                            </a>
+                        </li>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>

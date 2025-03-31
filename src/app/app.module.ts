@@ -15,6 +15,15 @@ import { UserdashComponent } from './userdash/userdash.component';
 import { MatCardModule, MatIconModule } from '@angular/material';
 import { NewcomplaintComponent } from './newcomplaint/newcomplaint.component';
 import { TrackcomplaintComponent } from './trackcomplaint/trackcomplaint.component';
+import { AdminnavbarComponent } from './adminnavbar/adminnavbar.component';
+import { AdmindashComponent } from './admindash/admindash.component';
+import { ComplaintslistComponent } from './complaintslist/complaintslist.component';
+import { ReviewcomplaintsComponent } from './reviewcomplaints/reviewcomplaints.component';
+import { UpdatecomplaintsComponent } from './updatecomplaints/updatecomplaints.component';
+import { UserslistComponent } from './userslist/userslist.component';
+import { AddDepartmentComponent } from './add-department/add-department.component';
+import { DepartmentListComponent } from './departmentlist/departmentlist.component';
+import { NgClass } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -28,6 +37,14 @@ import { TrackcomplaintComponent } from './trackcomplaint/trackcomplaint.compone
     UserdashComponent,
     NewcomplaintComponent,
     TrackcomplaintComponent,
+    AdminnavbarComponent,
+    AdmindashComponent,
+    ComplaintslistComponent,
+    ReviewcomplaintsComponent,
+    UpdatecomplaintsComponent,
+    UserslistComponent,
+    DepartmentListComponent,
+    AddDepartmentComponent,
   ],
   imports: [
     BrowserModule,

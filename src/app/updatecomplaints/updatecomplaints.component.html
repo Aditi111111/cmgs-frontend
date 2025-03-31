@@ -1,0 +1,48 @@
+<div class="update-complaint-container">
+    <h2>Update Complaints</h2>
+
+    <div class="search-container">
+        <input type="text" [(ngModel)]="searchTerm" placeholder="Search by Complaint ID or Username">
+        <button (click)="searchComplaint()">Search</button>
+    </div>
+
+    <table class="complaint-table">
+        <thead>
+            <tr>
+                <th>Complaint ID</th>
+                <th>Username</th>
+                <th>Complaint Type</th>
+                <th>Complaint Date</th>
+                <th>Status</th>
+                <th>Update</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let complaint of filteredComplaints">
+                <td>{{ complaint.id }}</td>
+                <td>{{ complaint.username }}</td>
+                <td>{{ complaint.type }}</td>
+                <td>{{ complaint.date }}</td>
+                <td>
+                    <span class="status-badge" [ngClass]="{
+                        'status-pending': complaint.status === 'Pending',
+                        'status-progress': complaint.status === 'In Progress',
+                        'status-resolved': complaint.status === 'Resolved'
+                    }">{{ complaint.status }}</span>
+                </td>
+                <td>
+                    <select [(ngModel)]="complaint.status">
+                        <option value="Pending">Pending</option>
+                        <option value="In Progress">In Progress</option>
+                        <option value="Resolved">Resolved</option>
+                    </select>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="submit-btn-container">
+        <button (click)="updateComplaints()">Update Status</button>
+    </div>
+</div>
+

@@ -1,0 +1,38 @@
+<div class="complaints-container">
+    <h2>Complaints List</h2>
+
+    <div class="search-section">
+        <input type="text" [(ngModel)]="searchTerm" placeholder="Search" class="search-box">
+    </div>
+
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Complaint ID</th>
+                    <th>Username</th>
+                    <th>Complaint Type</th>
+                    <th>Complaint Date</th>
+                    <th>Status</th>
+                    <th>View Details</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let complaint of filteredComplaints">
+                    <td>{{ complaint.id }}</td>
+                    <td>{{ complaint.username }}</td>
+                    <td>{{ complaint.type }}</td>
+                    <td>{{ complaint.date }}</td>
+                    <td>
+                        <span class="status-badge" [ngClass]="getStatusClass(complaint.status)">
+                            {{ complaint.status }}
+                        </span>
+                    </td>
+                    <td>
+                        <button class="btn btn-info btn-sm" (click)="viewComplaint(complaint)">View</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -23,7 +23,7 @@
     background: #1e293b;
     color: white;
     flex: 1;
-    padding: 20px;
+    padding: 2px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -60,7 +60,7 @@
   }
   
   .card i {
-    font-size: 30px;
+    font-size: 15px;
   }
   
   .complaint-stats {
